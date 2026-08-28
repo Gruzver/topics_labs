@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+  Kinova Jaco2 6DOF spherical, gripper 3 dedos (j2s6s300) - version standalone
+  para ROS2. Equivalente a j2s6s300_standalone.xacro de kinova-ros.
+-->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="j2s6s300">
+
+  <xacro:include filename="$(find kinova_description)/urdf/j2s6s300.xacro"/>
+
+  <link name="world"/>
+  <link name="root"/>
+
+  <joint name="connect_root_and_world" type="fixed">
+    <parent link="world"/>
+    <child link="root"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <xacro:j2s6s300 base_parent="root"/>
+
+</robot>
