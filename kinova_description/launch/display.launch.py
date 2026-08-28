@@ -15,7 +15,7 @@ def generate_launch_description():
     gui = LaunchConfiguration("gui")
 
     urdf_path = PathJoinSubstitution(
-        [FindPackageShare("kinova_description"), "urdf", "kinova_j2s6s300.urdf.xacro"]
+        [FindPackageShare("kinova_description"), "urdf", "kinova_j2s6s300.urdf"]
     )
     rviz_config_path = PathJoinSubstitution(
         [FindPackageShare("kinova_description"), "rviz", "display.rviz"]
